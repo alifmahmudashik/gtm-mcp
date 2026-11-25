@@ -8,7 +8,7 @@
     "dev": "tsx src/dev.ts",
     "smoke": "tsx scripts/smoke.ts"
   },
-  "engines": { "node": ">=20.3" },
+  "engines": { "node": ">=22" },
   "dependencies": {
     "@modelcontextprotocol/express": "^2.0.2",
     "@modelcontextprotocol/node": "^2.1.1",

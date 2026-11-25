@@ -45,3 +45,7 @@ function allowedHosts(): string[] {
   if (process.env.VERCEL_URL) hosts.add(process.env.VERCEL_URL);
   return [...hosts];
 }
+
+// Default export so Vercel's zero-config Express detection (which may pick src/app.ts as the
+// entrypoint instead of api/index.ts) still gets a valid handler.
+export default createApp();
