@@ -51,6 +51,11 @@ alter table users enable row level security;
 alter table auth_codes enable row level security;
 alter table tokens enable row level security;
 
+-- Newer Supabase projects don't auto-grant table privileges to the API roles, so the
+-- service-role key gets "permission denied" (42501) without these. anon/authenticated get nothing.
+grant usage on schema public to service_role;
+grant select, insert, update, delete on mcp_clients, oauth_pending, users, auth_codes, tokens to service_role;
+
 -- Optional housekeeping: delete expired rows (run on a Supabase cron if you like)
 -- delete from tokens where expires_at < now();
 -- delete from auth_codes where expires_at < now();
