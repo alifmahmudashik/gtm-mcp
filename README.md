@@ -15,7 +15,7 @@ Web and server-side (sGTM) containers are both covered (clients, transformations
 4. **Claude**: Settings > Connectors > Add custom connector > `https://gtm-mcp.alifmahmud.com/mcp` > Connect > pick your Google account.
 
 ## Dev
-`npm run smoke` runs an in-process test with the GTM API and Supabase stubbed. `npm run dev` serves on :3000.
+`npm run typecheck` type-checks; `npm run smoke` runs an in-process test with the GTM API and Supabase stubbed. `npm run dev` serves on :3000.
 
 ## Notes
 - With `ALLOWED_EMAILS=*`, each person signs in with their own Google account and only reaches their own GTM accounts; their tokens are stored per user. An unverified Google app is capped at 100 users.

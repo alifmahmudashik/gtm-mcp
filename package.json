@@ -4,11 +4,11 @@
   "description": "Google Tag Manager MCP server (OAuth connector flow, Vercel + Supabase)",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "typecheck": "tsc",
     "dev": "tsx src/dev.ts",
     "smoke": "tsx scripts/smoke.ts"
   },
-  "engines": { "node": ">=22" },
+  "engines": { "node": "22.x" },
   "dependencies": {
     "@modelcontextprotocol/express": "^2.0.2",
     "@modelcontextprotocol/node": "^2.1.1",
